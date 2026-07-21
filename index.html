@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sales Dashboard — Data Architecture Flow</title>
+<meta name="description" content="Sơ đồ kiến trúc luồng dữ liệu cho Sales Dashboard">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="tip"></div>
+<div class="wrap">
+
+  <div class="page-title">Sales Dashboard — Data Architecture Flow</div>
+
+  <!-- LEGEND -->
+  <div class="legend">
+    <div class="leg-item"><div class="leg-dot" style="background:#ede6fb;border-color:#b89fe0;"></div> Source Serving (C360)</div>
+    <div class="leg-item"><div class="leg-dot" style="background:#deeefa;border-color:#7ab8e8;"></div> BI_WS (Upload)</div>
+    <div class="leg-item"><div class="leg-dot" style="background:#c8f0d4;border-color:#4db86b;"></div> Adhoc BI Layer</div>
+    <div class="leg-item"><div class="leg-dot" style="background:#d0e8ff;border-color:#4a90d0;"></div> Looker Dashboard Input</div>
+  </div>
+  <div class="page-subtitle">Hover hoặc click vào khối để xem chi tiết thông tin bảng và luồng dữ liệu.</div>
+
+  <!-- CANVAS -->
+  <div class="canvas" id="canvas" data-connections='[{"from":"c360_cstmr_addtnl_dtl","to":"ncb_sd_fd_contract_tag_monthly"},{"from":"c360_cstmr_clssfctn","to":"ncb_sd_fd_contract_tag_monthly"},{"from":"c360_cstmr_dtl","to":"ncb_sd_fd_contract_tag_monthly"},{"from":"bi_fd_product_deposit_v2","to":"ncb_sd_fd_contract_tag_monthly"},{"from":"bi_fd_contract_exc","to":"ncb_sd_fd_contract_tag_monthly"},{"from":"c360_fxd_dpst","to":"ncb_sd_fd_contract_tag_monthly"},{"from":"ncb_sd_fd_contract_tag_monthly","to":"ncb_sd_fd_monthly"},{"from":"c360_fxd_dpst","to":"adhoc_sd_fd_contract_agg_daily"},{"from":"bi_fd_contract_exc","to":"adhoc_sd_fd_contract_agg_daily"},{"from":"adhoc_sd_fd_contract_agg_daily","to":"looker_agg_daily_source"}]'>
+
+    <!-- LAYER 1: SOURCE -->
+    <div class="zone z-raw" style="min-width:240px;">
+      <div class="zone-title">Source Layer</div>
+      
+      <div class="section-label">Source Serving (C360)</div>
+      <div class="col" style="margin-bottom:20px;">
+        <div class="box b-serving" id="c360_cstmr_addtnl_dtl">
+          <div class="label">c360_cstmr_addtnl_dtl</div>
+          <span class="badge badge-raw">Serving</span>
+        </div>
+        <div class="box b-serving" id="c360_cstmr_clssfctn">
+          <div class="label">c360_cstmr_clssfctn</div>
+          <span class="badge badge-raw">Serving</span>
+        </div>
+        <div class="box b-serving" id="c360_cstmr_dtl">
+          <div class="label">c360_cstmr_dtl</div>
+          <span class="badge badge-raw">Serving</span>
+        </div>
+        <div class="box b-serving" id="c360_fxd_dpst">
+          <div class="label">c360_fxd_dpst</div>
+          <span class="badge badge-raw">Serving</span>
+        </div>
+      </div>
+
+      <div class="section-label">BI_WS (Upload / Once for all)</div>
+      <div class="col">
+        <div class="box b-adhoc" id="bi_fd_product_deposit_v2">
+          <div class="label">bi_fd_product_deposit_v2</div>
+          <span class="badge badge-adhoc">BI_WS</span>
+        </div>
+        <div class="box b-adhoc" id="bi_fd_contract_exc">
+          <div class="label">bi_fd_contract_exc</div>
+          <span class="badge badge-adhoc">BI_WS</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- LAYER 2: ADHOC BI -->
+    <div class="zone z-mart" style="min-width:320px;">
+      <div class="zone-title">Adhoc BI Layer</div>
+      <div class="col" style="gap:15px;">
+        <div class="box b-mart" id="ncb_sd_fd_contract_tag_monthly">
+          <div class="label">adhoc_sd_fd_contract_tag_monthly</div>
+          <div class="sub">ncb-dp-prod-kvhj.ncb_dp_prod_dto_bi_ws</div>
+          <span class="badge badge-fact">Fact · Daily</span>
+        </div>
+        <div class="box b-mart" id="adhoc_sd_fd_contract_agg_daily">
+          <div class="label">adhoc_sd_fd_contract_agg_daily</div>
+          <div class="sub">Aggregate by sale_code + system_dt</div>
+          <span class="badge badge-agg">Fact · Daily</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- LAYER 3: LOOKER -->
+    <div class="zone z-dash" style="min-width:320px;">
+      <div class="zone-title">Looker Layer</div>
+      <div class="col" style="gap:15px;">
+        <div class="box b-page" id="ncb_sd_fd_monthly" style="padding:12px; background:#eff6ff; border-color:#93c5fd;">
+          <div class="label" style="font-size:14px; font-weight:700;">📊 adhoc_sd_fd_1date_monthly</div>
+          <div class="sub" style="margin-top:6px;">Snapshot Latest (từ tag monthly)</div>
+          <span class="badge badge-dashboard" style="margin-top:8px; display:inline-block;">Dashboard</span>
+        </div>
+        <div class="box b-page" id="looker_agg_daily_source" style="padding:12px; background:#eff6ff; border-color:#93c5fd;">
+          <div class="label" style="font-size:14px; font-weight:700;">📊 Custom Query Source (Agg Daily)</div>
+          <div class="sub" style="margin-top:6px;">Nguồn query trực tiếp cho Looker</div>
+          <span class="badge badge-dashboard" style="margin-top:8px; display:inline-block;">Dashboard</span>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- canvas -->
+
+</div><!-- wrap -->
+
+<script src="data.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
