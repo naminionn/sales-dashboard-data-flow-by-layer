@@ -82,6 +82,7 @@ body {
 .filter-btn.active.f-loan { background: #2563eb !important; border-color: #3b82f6 !important; }
 .filter-btn.active.f-od { background: #d97706 !important; border-color: #f59e0b !important; }
 .filter-btn.active.f-account { background: #7c3aed !important; border-color: #8b5cf6 !important; }
+.filter-btn.active.f-debit { background: #0e7490 !important; border-color: #22d3ee !important; }
 .filter-btn.active.f-cc { background: #dc2626 !important; border-color: #ef4444 !important; }
 .filter-btn.active.f-cust { background: #db2777 !important; border-color: #ec4899 !important; }
 .filter-btn.active.f-overview { background: #0891b2 !important; border-color: #06b6d4 !important; }
@@ -226,6 +227,7 @@ body {
 .prod-loan { border-left: 3px solid #3b82f6 !important; }
 .prod-od { border-left: 3px solid #f59e0b !important; }
 .prod-account { border-left: 3px solid #8b5cf6 !important; }
+.prod-debit { border-left: 3px solid #22d3ee !important; }
 .prod-cc { border-left: 3px solid #ef4444 !important; }
 .prod-cust { border-left: 3px solid #ec4899 !important; }
 .prod-overview { border-left: 3px solid #06b6d4 !important; }
@@ -309,6 +311,7 @@ body {
     <button class="filter-btn f-loan" data-product="loan">Lending (Loan)</button>
     <button class="filter-btn f-od" data-product="od">Overdraft (OD)</button>
     <button class="filter-btn f-account" data-product="account">Account</button>
+    <button class="filter-btn f-debit" data-product="debit">Debit Card</button>
     <button class="filter-btn f-cc" data-product="cc">Credit Card (CC)</button>
     <button class="filter-btn f-cust" data-product="cust">Customer Info</button>
     <button class="filter-btn f-overview" data-product="overview">Overview</button>
@@ -316,7 +319,7 @@ body {
 
   <!-- MAIN WORKSPACE -->
   <div class="main-viewport">
-    <div class="canvas" id="canvas" data-connections='[{"from": "tbl_adhoc_sd_fd_contract_tag_monthly_17", "to": "tbl_adhoc_sd_fd_1date_monthly_15", "product": "fd"}, {"from": "tbl_c360_cstmr_addtnl_dtl_60", "to": "tbl_adhoc_sd_fd_contract_tag_monthly_17", "product": "fd"}, {"from": "tbl_c360_cstmr_clssfctn_61", "to": "tbl_adhoc_sd_fd_contract_tag_monthly_17", "product": "fd"}, {"from": "tbl_c360_cstmr_dtl_43", "to": "tbl_adhoc_sd_fd_contract_tag_monthly_17", "product": "fd"}, {"from": "tbl_bi_fd_product_deposit_v2_27", "to": "tbl_adhoc_sd_fd_contract_tag_monthly_17", "product": "fd"}, {"from": "tbl_bi_fd_contract_exc_26", "to": "tbl_adhoc_sd_fd_contract_tag_monthly_17", "product": "fd"}, {"from": "tbl_c360_fxd_dpst_45", "to": "tbl_adhoc_sd_fd_contract_tag_monthly_17", "product": "fd"}, {"from": "tbl_c360_fxd_dpst_45", "to": "tbl_adhoc_sd_fd_contract_agg_daily_1", "product": "fd"}, {"from": "tbl_bi_fd_contract_exc_26", "to": "tbl_adhoc_sd_fd_contract_agg_daily_1", "product": "fd"}, {"from": "tbl_c360_cs_accnt_infrmtn_40", "to": "tbl_adhoc_bi_sd_cs_account_monthly_v2_7", "product": "account"}, {"from": "tbl_c360_cstmr_addtnl_dtl_60", "to": "tbl_adhoc_bi_sd_cs_account_monthly_v2_7", "product": "account"}, {"from": "tbl_c360_cstmr_clssfctn_61", "to": "tbl_adhoc_bi_sd_cs_account_monthly_v2_7", "product": "account"}, {"from": "tbl_c360_dbt_crd_44", "to": "tbl_adhoc_bi_sd_cs_account_monthly_v2_7", "product": "account"}, {"from": "tbl_adhoc_bi_cs_account_monthly_4", "to": "tbl_adhoc_bi_sd_cs_account_monthly_v2_7", "product": "account"}, {"from": "tbl_c360_cstmr_dtl_62", "to": "tbl_adhoc_bi_sd_cs_account_monthly_v2_7", "product": "account"}, {"from": "tbl_adj_dto_crm_sales_35", "to": "tbl_adhoc_bi_sd_cs_account_monthly_v2_7", "product": "account"}, {"from": "tbl_c360_cs_accnt_infrmtn_40", "to": "tbl_adhoc_bi_cs_account_monthly_4", "product": "account"}, {"from": "tbl_c360_cs_accnt_blncs_39", "to": "tbl_adhoc_bi_cs_account_monthly_4", "product": "account"}, {"from": "tbl_bi_dim_region_25", "to": "tbl_adhoc_bi_cs_account_monthly_4", "product": "account"}, {"from": "tbl_c360_cstmr_dtl_43", "to": "tbl_adhoc_bi_cs_account_monthly_4", "product": "account"}, {"from": "tbl_c360_bnk_rltnshp_36", "to": "tbl_adhoc_bi_cs_account_monthly_4", "product": "account"}, {"from": "tbl_c360_cs_accnt_blncs_39", "to": "tbl_adhoc_bi_sd_cs_account_daily_v2_6", "product": "overview"}, {"from": "tbl_adj_dto_crm_sales_35", "to": "tbl_adhoc_sd_cus_gg_product_holding_10", "product": "cust"}, {"from": "tbl_adhoc_sd_config_pq_9", "to": "tbl_adhoc_sd_cus_gg_product_holding_10", "product": "cust"}, {"from": "tbl_c360_fxd_dpst_45", "to": "tbl_adhoc_sd_cus_gg_product_holding_10", "product": "cust"}, {"from": "tbl_c360_cs_accnt_infrmtn_40", "to": "tbl_adhoc_sd_cus_gg_product_holding_10", "product": "cust"}, {"from": "tbl_c360_lns_46", "to": "tbl_adhoc_sd_cus_gg_product_holding_10", "product": "cust"}, {"from": "tbl_c360_ovrdrft_lmt_47", "to": "tbl_adhoc_sd_cus_gg_product_holding_10", "product": "cust"}, {"from": "tbl_c360_crd_dtl_37", "to": "tbl_adhoc_sd_cus_gg_product_holding_10", "product": "cust"}, {"from": "tbl_c360_cstmr_addtnl_dtl_41", "to": "tbl_adhoc_sd_cus_gg_product_holding_10", "product": "cust"}, {"from": "tbl_c360_cstmr_clssfctn_42", "to": "tbl_adhoc_sd_cus_gg_product_holding_10", "product": "cust"}, {"from": "tbl_c360_cstmr_dtl_43", "to": "tbl_adhoc_sd_cus_gg_product_holding_10", "product": "cust"}, {"from": "tbl_c360_cstmr_addtnl_dtl_41", "to": "tbl_adhoc_sd_cus_product_holding_11", "product": "cust"}, {"from": "tbl_c360_cstmr_clssfctn_42", "to": "tbl_adhoc_sd_cus_product_holding_11", "product": "cust"}, {"from": "tbl_c360_cs_accnt_infrmtn_40", "to": "tbl_adhoc_sd_cus_product_holding_11", "product": "cust"}, {"from": "tbl_c360_cs_accnt_blncs_39", "to": "tbl_adhoc_sd_cus_product_holding_11", "product": "cust"}, {"from": "tbl_c360_fxd_dpst_45", "to": "tbl_adhoc_sd_cus_product_holding_11", "product": "cust"}, {"from": "tbl_c360_ovrdrft_lmt_47", "to": "tbl_adhoc_sd_cus_product_holding_11", "product": "cust"}, {"from": "tbl_c360_lns_46", "to": "tbl_adhoc_sd_cus_product_holding_11", "product": "cust"}, {"from": "tbl_adhoc_bi_card_agg_monthly_update_3", "to": "tbl_adhoc_sd_cus_product_holding_11", "product": "cust"}, {"from": "tbl_c360_cstmr_dtl_43", "to": "tbl_adhoc_sd_cus_product_holding_11", "product": "cust"}, {"from": "tbl_adj_dto_crm_sales_35", "to": "tbl_adhoc_sd_cus_product_holding_11", "product": "cust"}, {"from": "tbl_adhoc_sd_config_pq_9", "to": "tbl_adhoc_sd_cus_product_holding_11", "product": "cust"}, {"from": "tbl_c360_ovrdrft_lmt_64", "to": "tbl_adhoc_sd_od_1date_18", "product": "od"}, {"from": "tbl_adhoc_sd_ovrdrft_cus_closed_flag_20", "to": "tbl_adhoc_sd_od_1date_18", "product": "od"}, {"from": "tbl_adhoc_sd_ovrdrft_daily_detail_21", "to": "tbl_adhoc_sd_od_1date_18", "product": "od"}, {"from": "tbl_c360_cstmr_dtl_62", "to": "tbl_adhoc_sd_od_1date_18", "product": "od"}, {"from": "tbl_adj_dto_crm_sales_35", "to": "tbl_adhoc_sd_od_1date_18", "product": "od"}, {"from": "tbl_adhoc_sd_ovrdrft_monthly_detail_22", "to": "tbl_adhoc_sd_od_1date_18", "product": "od"}, {"from": "tbl_c360_ovrdrft_lmt_64", "to": "tbl_adhoc_sd_ovrdrft_cus_closed_flag_20", "product": "od"}, {"from": "tbl_c360_ovrdrft_lmt_64", "to": "tbl_adhoc_sd_ovrdrft_daily_detail_21", "product": "od"}, {"from": "tbl_adhoc_sd_ovrdrft_cus_closed_flag_20", "to": "tbl_adhoc_sd_ovrdrft_daily_detail_21", "product": "od"}, {"from": "tbl_c360_ovrdrft_lmt_64", "to": "tbl_adhoc_sd_ovrdrft_monthly_detail_22", "product": "od"}, {"from": "tbl_c360_ovrdrft_lmt_47", "to": "tbl_adhoc_sd_ovrdrft_agg_new_account_19", "product": "overview"}, {"from": "tbl_c360_cstmr_addtnl_dtl_60", "to": "tbl_adhoc_bi_sd_lending_daily_54", "product": "loan"}, {"from": "tbl_c360_cstmr_clssfctn_61", "to": "tbl_adhoc_bi_sd_lending_daily_54", "product": "loan"}, {"from": "tbl_c360_lns_46", "to": "tbl_adhoc_bi_sd_lending_daily_54", "product": "loan"}, {"from": "tbl_upload_qttc_sbv_33", "to": "tbl_adhoc_bi_sd_lending_daily_54", "product": "loan"}, {"from": "tbl_upload_qttc_xoano_34", "to": "tbl_adhoc_bi_sd_lending_daily_54", "product": "loan"}, {"from": "tbl_bi_lending_paidoff_monthly_58", "to": "tbl_adhoc_bi_sd_lending_daily_54", "product": "loan"}, {"from": "tbl_bi_lending_prepaid_monthly_59", "to": "tbl_adhoc_bi_sd_lending_daily_54", "product": "loan"}, {"from": "tbl_dim_product_31", "to": "tbl_adhoc_bi_sd_lending_daily_54", "product": "loan"}, {"from": "tbl_c360_cstmr_dtl_43", "to": "tbl_adhoc_bi_sd_lending_daily_54", "product": "loan"}, {"from": "tbl_bi_lending_branch_28", "to": "tbl_adhoc_bi_sd_lending_daily_54", "product": "loan"}, {"from": "tbl_upload_qttc_badbank_32", "to": "tbl_adhoc_bi_sd_lending_daily_54", "product": "loan"}, {"from": "tbl_bi_lending_financial_solution_30", "to": "tbl_adhoc_bi_sd_lending_daily_54", "product": "loan"}, {"from": "tbl_bi_lending_debtgroup_29", "to": "tbl_adhoc_bi_sd_lending_daily_54", "product": "loan"}, {"from": "tbl_c360_ovrdrft_lmt_47", "to": "tbl_adhoc_bi_sd_lending_daily_54", "product": "loan"}, {"from": "tbl_c360_cstmr_addtnl_dtl_60", "to": "tbl_adhoc_bi_sd_lending_monthly_56", "product": "loan"}, {"from": "tbl_c360_cstmr_clssfctn_61", "to": "tbl_adhoc_bi_sd_lending_monthly_56", "product": "loan"}, {"from": "tbl_c360_lns_46", "to": "tbl_adhoc_bi_sd_lending_monthly_56", "product": "loan"}, {"from": "tbl_upload_qttc_sbv_33", "to": "tbl_adhoc_bi_sd_lending_monthly_56", "product": "loan"}, {"from": "tbl_upload_qttc_xoano_34", "to": "tbl_adhoc_bi_sd_lending_monthly_56", "product": "loan"}, {"from": "tbl_c360_ovrdrft_lmt_47", "to": "tbl_adhoc_bi_sd_lending_monthly_56", "product": "loan"}, {"from": "tbl_bi_lending_paidoff_monthly_58", "to": "tbl_adhoc_bi_sd_lending_monthly_56", "product": "loan"}, {"from": "tbl_bi_lending_prepaid_monthly_59", "to": "tbl_adhoc_bi_sd_lending_monthly_56", "product": "loan"}, {"from": "tbl_dim_product_31", "to": "tbl_adhoc_bi_sd_lending_monthly_56", "product": "loan"}, {"from": "tbl_c360_cstmr_dtl_43", "to": "tbl_adhoc_bi_sd_lending_monthly_56", "product": "loan"}, {"from": "tbl_bi_lending_branch_28", "to": "tbl_adhoc_bi_sd_lending_monthly_56", "product": "loan"}, {"from": "tbl_upload_qttc_badbank_32", "to": "tbl_adhoc_bi_sd_lending_monthly_56", "product": "loan"}, {"from": "tbl_bi_lending_financial_solution_30", "to": "tbl_adhoc_bi_sd_lending_monthly_56", "product": "loan"}, {"from": "tbl_bi_lending_debtgroup_29", "to": "tbl_adhoc_bi_sd_lending_monthly_56", "product": "loan"}, {"from": "tbl_adj_dto_crm_sales_35", "to": "tbl_adhoc_kpi_sales_rm_1date_8", "product": "overview"}, {"from": "tbl_adj_fa_rmd_mis1_kpi_sales_rm_24", "to": "tbl_adhoc_kpi_sales_rm_1date_8", "product": "overview"}, {"from": "tbl_c360_fxd_dpst_45", "to": "tbl_adhoc_sd_fd_contract_agg_daily_16", "product": "overview"}, {"from": "tbl_c360_lns_63", "to": "tbl_adhoc_bi_sd_lending_daily_1date_55", "product": "overview"}, {"from": "tbl_c360_cstmr_dtl_43", "to": "tbl_adhoc_sd_birthday_alert_57", "product": "overview"}, {"from": "tbl_c360_crd_dtl_37", "to": "tbl_adhoc_bi_sd_cc_daily_50", "product": "overview"}, {"from": "tbl_c360_crdt_crd_trnsctn_38", "to": "tbl_adhoc_bi_sd_cc_daily_50", "product": "overview"}, {"from": "tbl_adhoc_bi_card_agg_monthly_update_3", "to": "tbl_adhoc_bi_sd_cc_daily_50", "product": "overview"}, {"from": "tbl_c360_lns_63", "to": "tbl_adhoc_bi_sd_items_require_attention_53", "product": "overview"}, {"from": "tbl_c360_crd_dtl_37", "to": "tbl_adhoc_bi_sd_items_require_attention_53", "product": "overview"}, {"from": "tbl_c360_fxd_dpst_45", "to": "tbl_adhoc_bi_sd_items_require_attention_53", "product": "overview"}, {"from": "tbl_c360_ovrdrft_lmt_47", "to": "tbl_adhoc_bi_sd_items_require_attention_53", "product": "overview"}, {"from": "tbl_c360_lns_63", "to": "tbl_adhoc_sd_sm_npl_agg_daily_23", "product": "overview"}, {"from": "tbl_c360_crd_dtl_37", "to": "tbl_adhoc_sd_sm_npl_agg_daily_23", "product": "overview"}, {"from": "tbl_c360_crdt_crd_trnsctn_38", "to": "tbl_adhoc_sd_sm_npl_agg_daily_23", "product": "overview"}, {"from": "tbl_c360_ovrdrft_lmt_47", "to": "tbl_adhoc_sd_sm_npl_agg_daily_23", "product": "overview"}, {"from": "tbl_adhoc_bi_card_agg_monthly_update_3", "to": "tbl_adhoc_sd_sm_npl_agg_daily_23", "product": "overview"}, {"from": "tbl_adhoc_ai_cc_detail_update_48", "to": "tbl_adhoc_sd_sm_npl_agg_daily_23", "product": "overview"}, {"from": "tbl_bi_lending_paidoff_monthly_58", "to": "tbl_adhoc_sd_sm_npl_agg_daily_23", "product": "overview"}, {"from": "tbl_bi_lending_prepaid_monthly_59", "to": "tbl_adhoc_sd_sm_npl_agg_daily_23", "product": "overview"}, {"from": "tbl_bi_lending_financial_solution_30", "to": "tbl_adhoc_sd_sm_npl_agg_daily_23", "product": "overview"}, {"from": "tbl_bi_lending_debtgroup_29", "to": "tbl_adhoc_sd_sm_npl_agg_daily_23", "product": "overview"}, {"from": "tbl_mortgageapproval_logs_de_logs_curated_2", "to": "tbl_adhoc_sd_sm_npl_agg_daily_23", "product": "overview"}, {"from": "tbl_adhoc_bi_sd_lending_monthly_56", "to": "tbl_adhoc_sd_sm_npl_agg_daily_23", "product": "overview"}, {"from": "tbl_adhoc_sd_ovrdrft_monthly_detail_22", "to": "tbl_adhoc_sd_sm_npl_agg_daily_23", "product": "overview"}, {"from": "tbl_adhoc_bi_sd_cc_monthly_5", "to": "tbl_adhoc_sd_sm_npl_agg_daily_23", "product": "overview"}, {"from": "tbl_c360_lns_63", "to": "tbl_adhoc_bi_sd_cc_monthly_5", "product": "overview"}, {"from": "tbl_c360_crd_dtl_37", "to": "tbl_adhoc_bi_sd_cc_monthly_5", "product": "overview"}, {"from": "tbl_c360_crdt_crd_trnsctn_38", "to": "tbl_adhoc_bi_sd_cc_monthly_5", "product": "overview"}, {"from": "tbl_adhoc_bi_card_agg_monthly_update_3", "to": "tbl_adhoc_bi_sd_cc_monthly_5", "product": "overview"}, {"from": "tbl_adhoc_ai_cc_detail_update_48", "to": "tbl_adhoc_bi_sd_cc_monthly_5", "product": "overview"}, {"from": "tbl_bi_lending_paidoff_monthly_58", "to": "tbl_adhoc_bi_sd_cc_monthly_5", "product": "overview"}, {"from": "tbl_bi_lending_prepaid_monthly_59", "to": "tbl_adhoc_bi_sd_cc_monthly_5", "product": "overview"}, {"from": "tbl_bi_lending_financial_solution_30", "to": "tbl_adhoc_bi_sd_cc_monthly_5", "product": "overview"}, {"from": "tbl_bi_lending_debtgroup_29", "to": "tbl_adhoc_bi_sd_cc_monthly_5", "product": "overview"}, {"from": "tbl_mortgageapproval_logs_de_logs_curated_2", "to": "tbl_adhoc_bi_sd_cc_monthly_5", "product": "overview"}, {"from": "tbl_adhoc_ai_cc_detail_update_48", "to": "tbl_adhoc_bi_sd_cc_daily_v2_51", "product": "cc"}, {"from": "tbl_adhoc_bi_card_agg_monthly_update_49", "to": "tbl_adhoc_bi_sd_cc_daily_v2_51", "product": "cc"}, {"from": "tbl_adhoc_bi_card_agg_monthly_update_49", "to": "tbl_adhoc_bi_sd_cc_monthly_v2_52", "product": "cc"}, {"from": "tbl_c360_cstmr_dtl_62", "to": "tbl_adhoc_bi_sd_cc_monthly_v2_52", "product": "cc"}, {"from": "tbl_adj_dto_crm_sales_35", "to": "tbl_adhoc_bi_sd_cc_monthly_v2_52", "product": "cc"}, {"from": "tbl_c360_cstmr_addtnl_dtl_60", "to": "tbl_adhoc_sd_debit_card_new_thismonth_14", "product": "cc"}, {"from": "tbl_c360_dbt_crd_44", "to": "tbl_adhoc_sd_debit_card_new_thismonth_14", "product": "cc"}, {"from": "tbl_c360_cs_accnt_infrmtn_40", "to": "tbl_adhoc_sd_debit_card_new_thismonth_14", "product": "cc"}, {"from": "tbl_c360_cstmr_dtl_62", "to": "tbl_adhoc_sd_debit_card_new_thismonth_14", "product": "cc"}, {"from": "tbl_adj_dto_crm_sales_35", "to": "tbl_adhoc_sd_debit_card_new_thismonth_14", "product": "cc"}, {"from": "tbl_c360_cstmr_addtnl_dtl_41", "to": "tbl_adhoc_sd_debit_card_new_thismonth_14", "product": "cc"}, {"from": "tbl_c360_cstmr_addtnl_dtl_60", "to": "tbl_adhoc_sd_debit_card_new_monthly_agg_13", "product": "cc"}, {"from": "tbl_c360_dbt_crd_44", "to": "tbl_adhoc_sd_debit_card_new_monthly_agg_13", "product": "cc"}, {"from": "tbl_c360_cs_accnt_infrmtn_40", "to": "tbl_adhoc_sd_debit_card_new_monthly_agg_13", "product": "cc"}, {"from": "tbl_c360_cstmr_addtnl_dtl_41", "to": "tbl_adhoc_sd_debit_card_management_12", "product": "cc"}, {"from": "tbl_c360_dbt_crd_44", "to": "tbl_adhoc_sd_debit_card_management_12", "product": "cc"}, {"from": "tbl_c360_cs_accnt_infrmtn_40", "to": "tbl_adhoc_sd_debit_card_management_12", "product": "cc"}]'>
+    <div class="canvas" id="canvas" data-connections='[{"from": "tbl_adhoc_sd_fd_contract_tag_monthly_17", "to": "tbl_adhoc_sd_fd_1date_monthly_15", "product": "fd"}, {"from": "tbl_c360_cstmr_addtnl_dtl_60", "to": "tbl_adhoc_sd_fd_contract_tag_monthly_17", "product": "fd"}, {"from": "tbl_c360_cstmr_clssfctn_61", "to": "tbl_adhoc_sd_fd_contract_tag_monthly_17", "product": "fd"}, {"from": "tbl_c360_cstmr_dtl_43", "to": "tbl_adhoc_sd_fd_contract_tag_monthly_17", "product": "fd"}, {"from": "tbl_bi_fd_product_deposit_v2_27", "to": "tbl_adhoc_sd_fd_contract_tag_monthly_17", "product": "fd"}, {"from": "tbl_bi_fd_contract_exc_26", "to": "tbl_adhoc_sd_fd_contract_tag_monthly_17", "product": "fd"}, {"from": "tbl_c360_fxd_dpst_45", "to": "tbl_adhoc_sd_fd_contract_tag_monthly_17", "product": "fd"}, {"from": "tbl_c360_fxd_dpst_45", "to": "tbl_adhoc_sd_fd_contract_agg_daily_1", "product": "fd"}, {"from": "tbl_bi_fd_contract_exc_26", "to": "tbl_adhoc_sd_fd_contract_agg_daily_1", "product": "fd"}, {"from": "tbl_c360_cs_accnt_infrmtn_40", "to": "tbl_adhoc_bi_sd_cs_account_monthly_v2_7", "product": "account"}, {"from": "tbl_c360_cstmr_addtnl_dtl_60", "to": "tbl_adhoc_bi_sd_cs_account_monthly_v2_7", "product": "account"}, {"from": "tbl_c360_cstmr_clssfctn_61", "to": "tbl_adhoc_bi_sd_cs_account_monthly_v2_7", "product": "account"}, {"from": "tbl_c360_dbt_crd_44", "to": "tbl_adhoc_bi_sd_cs_account_monthly_v2_7", "product": "account"}, {"from": "tbl_adhoc_bi_cs_account_monthly_4", "to": "tbl_adhoc_bi_sd_cs_account_monthly_v2_7", "product": "account"}, {"from": "tbl_c360_cstmr_dtl_62", "to": "tbl_adhoc_bi_sd_cs_account_monthly_v2_7", "product": "account"}, {"from": "tbl_adj_dto_crm_sales_35", "to": "tbl_adhoc_bi_sd_cs_account_monthly_v2_7", "product": "account"}, {"from": "tbl_c360_cs_accnt_infrmtn_40", "to": "tbl_adhoc_bi_cs_account_monthly_4", "product": "account"}, {"from": "tbl_c360_cs_accnt_blncs_39", "to": "tbl_adhoc_bi_cs_account_monthly_4", "product": "account"}, {"from": "tbl_bi_dim_region_25", "to": "tbl_adhoc_bi_cs_account_monthly_4", "product": "account"}, {"from": "tbl_c360_cstmr_dtl_43", "to": "tbl_adhoc_bi_cs_account_monthly_4", "product": "account"}, {"from": "tbl_c360_bnk_rltnshp_36", "to": "tbl_adhoc_bi_cs_account_monthly_4", "product": "account"}, {"from": "tbl_c360_cs_accnt_blncs_39", "to": "tbl_adhoc_bi_sd_cs_account_daily_v2_6", "product": "overview"}, {"from": "tbl_adj_dto_crm_sales_35", "to": "tbl_adhoc_sd_cus_gg_product_holding_10", "product": "cust"}, {"from": "tbl_adhoc_sd_config_pq_9", "to": "tbl_adhoc_sd_cus_gg_product_holding_10", "product": "cust"}, {"from": "tbl_c360_fxd_dpst_45", "to": "tbl_adhoc_sd_cus_gg_product_holding_10", "product": "cust"}, {"from": "tbl_c360_cs_accnt_infrmtn_40", "to": "tbl_adhoc_sd_cus_gg_product_holding_10", "product": "cust"}, {"from": "tbl_c360_lns_46", "to": "tbl_adhoc_sd_cus_gg_product_holding_10", "product": "cust"}, {"from": "tbl_c360_ovrdrft_lmt_47", "to": "tbl_adhoc_sd_cus_gg_product_holding_10", "product": "cust"}, {"from": "tbl_c360_crd_dtl_37", "to": "tbl_adhoc_sd_cus_gg_product_holding_10", "product": "cust"}, {"from": "tbl_c360_cstmr_addtnl_dtl_41", "to": "tbl_adhoc_sd_cus_gg_product_holding_10", "product": "cust"}, {"from": "tbl_c360_cstmr_clssfctn_42", "to": "tbl_adhoc_sd_cus_gg_product_holding_10", "product": "cust"}, {"from": "tbl_c360_cstmr_dtl_43", "to": "tbl_adhoc_sd_cus_gg_product_holding_10", "product": "cust"}, {"from": "tbl_c360_cstmr_addtnl_dtl_41", "to": "tbl_adhoc_sd_cus_product_holding_11", "product": "cust"}, {"from": "tbl_c360_cstmr_clssfctn_42", "to": "tbl_adhoc_sd_cus_product_holding_11", "product": "cust"}, {"from": "tbl_c360_cs_accnt_infrmtn_40", "to": "tbl_adhoc_sd_cus_product_holding_11", "product": "cust"}, {"from": "tbl_c360_cs_accnt_blncs_39", "to": "tbl_adhoc_sd_cus_product_holding_11", "product": "cust"}, {"from": "tbl_c360_fxd_dpst_45", "to": "tbl_adhoc_sd_cus_product_holding_11", "product": "cust"}, {"from": "tbl_c360_ovrdrft_lmt_47", "to": "tbl_adhoc_sd_cus_product_holding_11", "product": "cust"}, {"from": "tbl_c360_lns_46", "to": "tbl_adhoc_sd_cus_product_holding_11", "product": "cust"}, {"from": "tbl_adhoc_bi_card_agg_monthly_update_3", "to": "tbl_adhoc_sd_cus_product_holding_11", "product": "cust"}, {"from": "tbl_c360_cstmr_dtl_43", "to": "tbl_adhoc_sd_cus_product_holding_11", "product": "cust"}, {"from": "tbl_adj_dto_crm_sales_35", "to": "tbl_adhoc_sd_cus_product_holding_11", "product": "cust"}, {"from": "tbl_adhoc_sd_config_pq_9", "to": "tbl_adhoc_sd_cus_product_holding_11", "product": "cust"}, {"from": "tbl_c360_ovrdrft_lmt_64", "to": "tbl_adhoc_sd_od_1date_18", "product": "od"}, {"from": "tbl_adhoc_sd_ovrdrft_cus_closed_flag_20", "to": "tbl_adhoc_sd_od_1date_18", "product": "od"}, {"from": "tbl_adhoc_sd_ovrdrft_daily_detail_21", "to": "tbl_adhoc_sd_od_1date_18", "product": "od"}, {"from": "tbl_c360_cstmr_dtl_62", "to": "tbl_adhoc_sd_od_1date_18", "product": "od"}, {"from": "tbl_adj_dto_crm_sales_35", "to": "tbl_adhoc_sd_od_1date_18", "product": "od"}, {"from": "tbl_adhoc_sd_ovrdrft_monthly_detail_22", "to": "tbl_adhoc_sd_od_1date_18", "product": "od"}, {"from": "tbl_c360_ovrdrft_lmt_64", "to": "tbl_adhoc_sd_ovrdrft_cus_closed_flag_20", "product": "od"}, {"from": "tbl_c360_ovrdrft_lmt_64", "to": "tbl_adhoc_sd_ovrdrft_daily_detail_21", "product": "od"}, {"from": "tbl_adhoc_sd_ovrdrft_cus_closed_flag_20", "to": "tbl_adhoc_sd_ovrdrft_daily_detail_21", "product": "od"}, {"from": "tbl_c360_ovrdrft_lmt_64", "to": "tbl_adhoc_sd_ovrdrft_monthly_detail_22", "product": "od"}, {"from": "tbl_c360_ovrdrft_lmt_47", "to": "tbl_adhoc_sd_ovrdrft_agg_new_account_19", "product": "overview"}, {"from": "tbl_c360_cstmr_addtnl_dtl_60", "to": "tbl_adhoc_bi_sd_lending_daily_54", "product": "loan"}, {"from": "tbl_c360_cstmr_clssfctn_61", "to": "tbl_adhoc_bi_sd_lending_daily_54", "product": "loan"}, {"from": "tbl_c360_lns_46", "to": "tbl_adhoc_bi_sd_lending_daily_54", "product": "loan"}, {"from": "tbl_upload_qttc_sbv_33", "to": "tbl_adhoc_bi_sd_lending_daily_54", "product": "loan"}, {"from": "tbl_upload_qttc_xoano_34", "to": "tbl_adhoc_bi_sd_lending_daily_54", "product": "loan"}, {"from": "tbl_bi_lending_paidoff_monthly_58", "to": "tbl_adhoc_bi_sd_lending_daily_54", "product": "loan"}, {"from": "tbl_bi_lending_prepaid_monthly_59", "to": "tbl_adhoc_bi_sd_lending_daily_54", "product": "loan"}, {"from": "tbl_dim_product_31", "to": "tbl_adhoc_bi_sd_lending_daily_54", "product": "loan"}, {"from": "tbl_c360_cstmr_dtl_43", "to": "tbl_adhoc_bi_sd_lending_daily_54", "product": "loan"}, {"from": "tbl_bi_lending_branch_28", "to": "tbl_adhoc_bi_sd_lending_daily_54", "product": "loan"}, {"from": "tbl_upload_qttc_badbank_32", "to": "tbl_adhoc_bi_sd_lending_daily_54", "product": "loan"}, {"from": "tbl_bi_lending_financial_solution_30", "to": "tbl_adhoc_bi_sd_lending_daily_54", "product": "loan"}, {"from": "tbl_bi_lending_debtgroup_29", "to": "tbl_adhoc_bi_sd_lending_daily_54", "product": "loan"}, {"from": "tbl_c360_ovrdrft_lmt_47", "to": "tbl_adhoc_bi_sd_lending_daily_54", "product": "loan"}, {"from": "tbl_c360_cstmr_addtnl_dtl_60", "to": "tbl_adhoc_bi_sd_lending_monthly_56", "product": "loan"}, {"from": "tbl_c360_cstmr_clssfctn_61", "to": "tbl_adhoc_bi_sd_lending_monthly_56", "product": "loan"}, {"from": "tbl_c360_lns_46", "to": "tbl_adhoc_bi_sd_lending_monthly_56", "product": "loan"}, {"from": "tbl_upload_qttc_sbv_33", "to": "tbl_adhoc_bi_sd_lending_monthly_56", "product": "loan"}, {"from": "tbl_upload_qttc_xoano_34", "to": "tbl_adhoc_bi_sd_lending_monthly_56", "product": "loan"}, {"from": "tbl_c360_ovrdrft_lmt_47", "to": "tbl_adhoc_bi_sd_lending_monthly_56", "product": "loan"}, {"from": "tbl_bi_lending_paidoff_monthly_58", "to": "tbl_adhoc_bi_sd_lending_monthly_56", "product": "loan"}, {"from": "tbl_bi_lending_prepaid_monthly_59", "to": "tbl_adhoc_bi_sd_lending_monthly_56", "product": "loan"}, {"from": "tbl_dim_product_31", "to": "tbl_adhoc_bi_sd_lending_monthly_56", "product": "loan"}, {"from": "tbl_c360_cstmr_dtl_43", "to": "tbl_adhoc_bi_sd_lending_monthly_56", "product": "loan"}, {"from": "tbl_bi_lending_branch_28", "to": "tbl_adhoc_bi_sd_lending_monthly_56", "product": "loan"}, {"from": "tbl_upload_qttc_badbank_32", "to": "tbl_adhoc_bi_sd_lending_monthly_56", "product": "loan"}, {"from": "tbl_bi_lending_financial_solution_30", "to": "tbl_adhoc_bi_sd_lending_monthly_56", "product": "loan"}, {"from": "tbl_bi_lending_debtgroup_29", "to": "tbl_adhoc_bi_sd_lending_monthly_56", "product": "loan"}, {"from": "tbl_adj_dto_crm_sales_35", "to": "tbl_adhoc_kpi_sales_rm_1date_8", "product": "overview"}, {"from": "tbl_adj_fa_rmd_mis1_kpi_sales_rm_24", "to": "tbl_adhoc_kpi_sales_rm_1date_8", "product": "overview"}, {"from": "tbl_c360_fxd_dpst_45", "to": "tbl_adhoc_sd_fd_contract_agg_daily_16", "product": "overview"}, {"from": "tbl_c360_lns_63", "to": "tbl_adhoc_bi_sd_lending_daily_1date_55", "product": "overview"}, {"from": "tbl_c360_cstmr_dtl_43", "to": "tbl_adhoc_sd_birthday_alert_57", "product": "overview"}, {"from": "tbl_c360_crd_dtl_37", "to": "tbl_adhoc_bi_sd_cc_daily_50", "product": "overview"}, {"from": "tbl_c360_crdt_crd_trnsctn_38", "to": "tbl_adhoc_bi_sd_cc_daily_50", "product": "overview"}, {"from": "tbl_adhoc_bi_card_agg_monthly_update_3", "to": "tbl_adhoc_bi_sd_cc_daily_50", "product": "overview"}, {"from": "tbl_c360_lns_63", "to": "tbl_adhoc_bi_sd_items_require_attention_53", "product": "overview"}, {"from": "tbl_c360_crd_dtl_37", "to": "tbl_adhoc_bi_sd_items_require_attention_53", "product": "overview"}, {"from": "tbl_c360_fxd_dpst_45", "to": "tbl_adhoc_bi_sd_items_require_attention_53", "product": "overview"}, {"from": "tbl_c360_ovrdrft_lmt_47", "to": "tbl_adhoc_bi_sd_items_require_attention_53", "product": "overview"}, {"from": "tbl_c360_lns_63", "to": "tbl_adhoc_sd_sm_npl_agg_daily_23", "product": "overview"}, {"from": "tbl_c360_crd_dtl_37", "to": "tbl_adhoc_sd_sm_npl_agg_daily_23", "product": "overview"}, {"from": "tbl_c360_crdt_crd_trnsctn_38", "to": "tbl_adhoc_sd_sm_npl_agg_daily_23", "product": "overview"}, {"from": "tbl_c360_ovrdrft_lmt_47", "to": "tbl_adhoc_sd_sm_npl_agg_daily_23", "product": "overview"}, {"from": "tbl_adhoc_bi_card_agg_monthly_update_3", "to": "tbl_adhoc_sd_sm_npl_agg_daily_23", "product": "overview"}, {"from": "tbl_adhoc_ai_cc_detail_update_48", "to": "tbl_adhoc_sd_sm_npl_agg_daily_23", "product": "overview"}, {"from": "tbl_bi_lending_paidoff_monthly_58", "to": "tbl_adhoc_sd_sm_npl_agg_daily_23", "product": "overview"}, {"from": "tbl_bi_lending_prepaid_monthly_59", "to": "tbl_adhoc_sd_sm_npl_agg_daily_23", "product": "overview"}, {"from": "tbl_bi_lending_financial_solution_30", "to": "tbl_adhoc_sd_sm_npl_agg_daily_23", "product": "overview"}, {"from": "tbl_bi_lending_debtgroup_29", "to": "tbl_adhoc_sd_sm_npl_agg_daily_23", "product": "overview"}, {"from": "tbl_mortgageapproval_logs_de_logs_curated_2", "to": "tbl_adhoc_sd_sm_npl_agg_daily_23", "product": "overview"}, {"from": "tbl_adhoc_bi_sd_lending_monthly_56", "to": "tbl_adhoc_sd_sm_npl_agg_daily_23", "product": "overview"}, {"from": "tbl_adhoc_sd_ovrdrft_monthly_detail_22", "to": "tbl_adhoc_sd_sm_npl_agg_daily_23", "product": "overview"}, {"from": "tbl_adhoc_bi_sd_cc_monthly_5", "to": "tbl_adhoc_sd_sm_npl_agg_daily_23", "product": "overview"}, {"from": "tbl_c360_lns_63", "to": "tbl_adhoc_bi_sd_cc_monthly_5", "product": "overview"}, {"from": "tbl_c360_crd_dtl_37", "to": "tbl_adhoc_bi_sd_cc_monthly_5", "product": "overview"}, {"from": "tbl_c360_crdt_crd_trnsctn_38", "to": "tbl_adhoc_bi_sd_cc_monthly_5", "product": "overview"}, {"from": "tbl_adhoc_bi_card_agg_monthly_update_3", "to": "tbl_adhoc_bi_sd_cc_monthly_5", "product": "overview"}, {"from": "tbl_adhoc_ai_cc_detail_update_48", "to": "tbl_adhoc_bi_sd_cc_monthly_5", "product": "overview"}, {"from": "tbl_bi_lending_paidoff_monthly_58", "to": "tbl_adhoc_bi_sd_cc_monthly_5", "product": "overview"}, {"from": "tbl_bi_lending_prepaid_monthly_59", "to": "tbl_adhoc_bi_sd_cc_monthly_5", "product": "overview"}, {"from": "tbl_bi_lending_financial_solution_30", "to": "tbl_adhoc_bi_sd_cc_monthly_5", "product": "overview"}, {"from": "tbl_bi_lending_debtgroup_29", "to": "tbl_adhoc_bi_sd_cc_monthly_5", "product": "overview"}, {"from": "tbl_mortgageapproval_logs_de_logs_curated_2", "to": "tbl_adhoc_bi_sd_cc_monthly_5", "product": "overview"}, {"from": "tbl_adhoc_ai_cc_detail_update_48", "to": "tbl_adhoc_bi_sd_cc_daily_v2_51", "product": "cc"}, {"from": "tbl_adhoc_bi_card_agg_monthly_update_49", "to": "tbl_adhoc_bi_sd_cc_daily_v2_51", "product": "cc"}, {"from": "tbl_adhoc_bi_card_agg_monthly_update_49", "to": "tbl_adhoc_bi_sd_cc_monthly_v2_52", "product": "cc"}, {"from": "tbl_c360_cstmr_dtl_62", "to": "tbl_adhoc_bi_sd_cc_monthly_v2_52", "product": "cc"}, {"from": "tbl_adj_dto_crm_sales_35", "to": "tbl_adhoc_bi_sd_cc_monthly_v2_52", "product": "cc"}, {"from": "tbl_c360_cstmr_addtnl_dtl_60", "to": "tbl_adhoc_sd_debit_card_new_thismonth_14", "product": "debit"}, {"from": "tbl_c360_dbt_crd_44", "to": "tbl_adhoc_sd_debit_card_new_thismonth_14", "product": "debit"}, {"from": "tbl_c360_cs_accnt_infrmtn_40", "to": "tbl_adhoc_sd_debit_card_new_thismonth_14", "product": "debit"}, {"from": "tbl_c360_cstmr_dtl_62", "to": "tbl_adhoc_sd_debit_card_new_thismonth_14", "product": "debit"}, {"from": "tbl_adj_dto_crm_sales_35", "to": "tbl_adhoc_sd_debit_card_new_thismonth_14", "product": "debit"}, {"from": "tbl_c360_cstmr_addtnl_dtl_41", "to": "tbl_adhoc_sd_debit_card_new_thismonth_14", "product": "debit"}, {"from": "tbl_c360_cstmr_addtnl_dtl_60", "to": "tbl_adhoc_sd_debit_card_new_monthly_agg_13", "product": "debit"}, {"from": "tbl_c360_dbt_crd_44", "to": "tbl_adhoc_sd_debit_card_new_monthly_agg_13", "product": "debit"}, {"from": "tbl_c360_cs_accnt_infrmtn_40", "to": "tbl_adhoc_sd_debit_card_new_monthly_agg_13", "product": "debit"}, {"from": "tbl_c360_cstmr_addtnl_dtl_41", "to": "tbl_adhoc_sd_debit_card_management_12", "product": "debit"}, {"from": "tbl_c360_dbt_crd_44", "to": "tbl_adhoc_sd_debit_card_management_12", "product": "debit"}, {"from": "tbl_c360_cs_accnt_infrmtn_40", "to": "tbl_adhoc_sd_debit_card_management_12", "product": "debit"}]'>
 
       <!-- LAYER 1: SOURCE -->
       <div class="zone z-raw">
@@ -554,7 +557,7 @@ body {
           <span class="badge badge-fact">fact</span>
         </div>
 
-        <div class="box prod-cc" id="tbl_adhoc_sd_debit_card_new_thismonth_14" data-product="cc">
+        <div class="box prod-debit" id="tbl_adhoc_sd_debit_card_new_thismonth_14" data-product="debit">
           <div class="label">ncb-dp-prod-kvhj.ncb_dp_prod_dto_bi_ws.adhoc_sd_debit_card_new_thismonth</div>
           <span class="badge badge-fact">fact</span>
         </div>
@@ -650,12 +653,12 @@ body {
           <span class="badge badge-fact">fact</span>
         </div>
 
-        <div class="box prod-cc" id="tbl_adhoc_sd_debit_card_management_12" data-product="cc">
+        <div class="box prod-debit" id="tbl_adhoc_sd_debit_card_management_12" data-product="debit">
           <div class="label">ncb-dp-prod-kvhj.ncb_dp_prod_dto_bi_ws.adhoc_sd_debit_card_management</div>
           <span class="badge badge-fact">fact</span>
         </div>
 
-        <div class="box prod-cc" id="tbl_adhoc_sd_debit_card_new_monthly_agg_13" data-product="cc">
+        <div class="box prod-debit" id="tbl_adhoc_sd_debit_card_new_monthly_agg_13" data-product="debit">
           <div class="label">ncb-dp-prod-kvhj.ncb_dp_prod_dto_bi_ws.adhoc_sd_debit_card_new_monthly_agg</div>
           <span class="badge badge-fact">fact</span>
         </div>
@@ -911,7 +914,7 @@ const tablesMetadata = {
     "grain": "systm_dt + crd_id",
     "frequency": "daily",
     "type": "fact",
-    "product": "cc"
+    "product": "debit"
   },
   "tbl_adhoc_sd_debit_card_new_monthly_agg_13": {
     "name": "ncb-dp-prod-kvhj.ncb_dp_prod_dto_bi_ws.adhoc_sd_debit_card_new_monthly_agg",
@@ -919,7 +922,7 @@ const tablesMetadata = {
     "grain": "sale_code + iss_month",
     "frequency": "daily",
     "type": "fact",
-    "product": "cc"
+    "product": "debit"
   },
   "tbl_adhoc_sd_debit_card_management_12": {
     "name": "ncb-dp-prod-kvhj.ncb_dp_prod_dto_bi_ws.adhoc_sd_debit_card_management",
@@ -927,7 +930,55 @@ const tablesMetadata = {
     "grain": "sale_code + systm_dt",
     "frequency": "daily",
     "type": "fact",
-    "product": "cc"
+    "product": "debit"
+  },
+  "tbl_c360_fxd_dpst_45": {
+    "name": "ncb-dp-prod-kvhj.ncb_dp_prod_serving.c360_fxd_dpst",
+    "source": "N/A",
+    "grain": "N/A",
+    "frequency": "Daily",
+    "type": "Source Table",
+    "product": "od"
+  },
+  "tbl_c360_cstmr_dtl_43": {
+    "name": "ncb-dp-prod-kvhj.ncb_dp_prod_serving.c360_cstmr_dtl",
+    "source": "N/A",
+    "grain": "N/A",
+    "frequency": "Daily",
+    "type": "Source Table",
+    "product": "od"
+  },
+  "tbl_bi_fd_product_deposit_v2_27": {
+    "name": "ncb-dp-prod-kvhj.ncb_dp_prod_dto_bi_ws.bi_fd_product_deposit_v2",
+    "source": "N/A",
+    "grain": "N/A",
+    "frequency": "Daily",
+    "type": "Source Table",
+    "product": "fd"
+  },
+  "tbl_c360_bnk_rltnshp_36": {
+    "name": "ncb-dp-prod-kvhj.ncb_dp_prod_serving.c360_bnk_rltnshp",
+    "source": "N/A",
+    "grain": "N/A",
+    "frequency": "Daily",
+    "type": "Source Table",
+    "product": "od"
+  },
+  "tbl_c360_cstmr_clssfctn_61": {
+    "name": "ncb_dp_prod_serving.c360_cstmr_clssfctn",
+    "source": "N/A",
+    "grain": "N/A",
+    "frequency": "Daily",
+    "type": "Source Table",
+    "product": "od"
+  },
+  "tbl_c360_cs_accnt_infrmtn_40": {
+    "name": "ncb-dp-prod-kvhj.ncb_dp_prod_serving.c360_cs_accnt_infrmtn",
+    "source": "N/A",
+    "grain": "N/A",
+    "frequency": "Daily",
+    "type": "Source Table",
+    "product": "od"
   },
   "tbl_bi_lending_debtgroup_29": {
     "name": "ncb-dp-prod-kvhj.ncb_dp_prod_dto_bi_ws.bi_lending_debtgroup",
@@ -937,16 +988,40 @@ const tablesMetadata = {
     "type": "Source Table",
     "product": "loan"
   },
-  "tbl_c360_crd_dtl_37": {
-    "name": "ncb-dp-prod-kvhj.ncb_dp_prod_serving.c360_crd_dtl",
+  "tbl_adhoc_sd_config_pq_9": {
+    "name": "ncb-dp-prod-kvhj.ncb_dp_prod_dto_bi_ws.adhoc_sd_config_pq",
     "source": "N/A",
     "grain": "N/A",
     "frequency": "Daily",
     "type": "Source Table",
     "product": "od"
   },
-  "tbl_dim_product_31": {
-    "name": "ncb-dp-prod-kvhj.ncb_dp_prod_dto_bi_ws.dim_product",
+  "tbl_c360_ovrdrft_lmt_47": {
+    "name": "ncb-dp-prod-kvhj.ncb_dp_prod_serving.c360_ovrdrft_lmt",
+    "source": "N/A",
+    "grain": "N/A",
+    "frequency": "Daily",
+    "type": "Source Table",
+    "product": "od"
+  },
+  "tbl_upload_qttc_badbank_32": {
+    "name": "ncb-dp-prod-kvhj.ncb_dp_prod_dto_bi_ws.upload_qttc_badbank",
+    "source": "N/A",
+    "grain": "N/A",
+    "frequency": "Daily",
+    "type": "Source Table",
+    "product": "od"
+  },
+  "tbl_upload_qttc_sbv_33": {
+    "name": "ncb-dp-prod-kvhj.ncb_dp_prod_dto_bi_ws.upload_qttc_sbv",
+    "source": "N/A",
+    "grain": "N/A",
+    "frequency": "Daily",
+    "type": "Source Table",
+    "product": "od"
+  },
+  "tbl_c360_cstmr_addtnl_dtl_60": {
+    "name": "ncb_dp_prod_serving.c360_cstmr_addtnl_dtl",
     "source": "N/A",
     "grain": "N/A",
     "frequency": "Daily",
@@ -961,8 +1036,56 @@ const tablesMetadata = {
     "type": "Source Table",
     "product": "od"
   },
-  "tbl_c360_ovrdrft_lmt_47": {
-    "name": "ncb-dp-prod-kvhj.ncb_dp_prod_serving.c360_ovrdrft_lmt",
+  "tbl_c360_cs_accnt_blncs_39": {
+    "name": "ncb-dp-prod-kvhj.ncb_dp_prod_serving.c360_cs_accnt_blncs",
+    "source": "N/A",
+    "grain": "N/A",
+    "frequency": "Daily",
+    "type": "Source Table",
+    "product": "od"
+  },
+  "tbl_bi_lending_branch_28": {
+    "name": "ncb-dp-prod-kvhj.ncb_dp_prod_dto_bi_ws.bi_lending_branch",
+    "source": "N/A",
+    "grain": "N/A",
+    "frequency": "Daily",
+    "type": "Source Table",
+    "product": "loan"
+  },
+  "tbl_bi_lending_financial_solution_30": {
+    "name": "ncb-dp-prod-kvhj.ncb_dp_prod_dto_bi_ws.bi_lending_financial_solution",
+    "source": "N/A",
+    "grain": "N/A",
+    "frequency": "Daily",
+    "type": "Source Table",
+    "product": "loan"
+  },
+  "tbl_adj_fa_rmd_mis1_kpi_sales_rm_24": {
+    "name": "ncb-dp-prod-kvhj.ncb_dp_prod_dto_bi_ws.adj_fa_rmd_mis1_kpi_sales_rm",
+    "source": "N/A",
+    "grain": "N/A",
+    "frequency": "Daily",
+    "type": "Source Table",
+    "product": "od"
+  },
+  "tbl_bi_fd_contract_exc_26": {
+    "name": "ncb-dp-prod-kvhj.ncb_dp_prod_dto_bi_ws.bi_fd_contract_exc",
+    "source": "N/A",
+    "grain": "N/A",
+    "frequency": "Daily",
+    "type": "Source Table",
+    "product": "fd"
+  },
+  "tbl_bi_lending_paidoff_monthly_58": {
+    "name": "ncb_dp_prod_dto_bi_ws.bi_lending_paidoff_monthly",
+    "source": "N/A",
+    "grain": "N/A",
+    "frequency": "Daily",
+    "type": "Source Table",
+    "product": "loan"
+  },
+  "tbl_adj_dto_crm_sales_35": {
+    "name": "ncb-dp-prod-kvhj.ncb_dp_prod_dto_crm_ws.adj_dto_crm_sales",
     "source": "N/A",
     "grain": "N/A",
     "frequency": "Daily",
@@ -985,56 +1108,16 @@ const tablesMetadata = {
     "type": "Source Table",
     "product": "od"
   },
-  "tbl_c360_cstmr_clssfctn_42": {
-    "name": "ncb-dp-prod-kvhj.ncb_dp_prod_serving.c360_cstmr_clssfctn",
+  "tbl_dim_product_31": {
+    "name": "ncb-dp-prod-kvhj.ncb_dp_prod_dto_bi_ws.dim_product",
     "source": "N/A",
     "grain": "N/A",
     "frequency": "Daily",
     "type": "Source Table",
     "product": "od"
   },
-  "tbl_upload_qttc_sbv_33": {
-    "name": "ncb-dp-prod-kvhj.ncb_dp_prod_dto_bi_ws.upload_qttc_sbv",
-    "source": "N/A",
-    "grain": "N/A",
-    "frequency": "Daily",
-    "type": "Source Table",
-    "product": "od"
-  },
-  "tbl_bi_lending_branch_28": {
-    "name": "ncb-dp-prod-kvhj.ncb_dp_prod_dto_bi_ws.bi_lending_branch",
-    "source": "N/A",
-    "grain": "N/A",
-    "frequency": "Daily",
-    "type": "Source Table",
-    "product": "loan"
-  },
-  "tbl_c360_lns_46": {
-    "name": "ncb-dp-prod-kvhj.ncb_dp_prod_serving.c360_lns",
-    "source": "N/A",
-    "grain": "N/A",
-    "frequency": "Daily",
-    "type": "Source Table",
-    "product": "loan"
-  },
-  "tbl_bi_fd_contract_exc_26": {
-    "name": "ncb-dp-prod-kvhj.ncb_dp_prod_dto_bi_ws.bi_fd_contract_exc",
-    "source": "N/A",
-    "grain": "N/A",
-    "frequency": "Daily",
-    "type": "Source Table",
-    "product": "fd"
-  },
-  "tbl_c360_cstmr_dtl_43": {
-    "name": "ncb-dp-prod-kvhj.ncb_dp_prod_serving.c360_cstmr_dtl",
-    "source": "N/A",
-    "grain": "N/A",
-    "frequency": "Daily",
-    "type": "Source Table",
-    "product": "od"
-  },
-  "tbl_c360_fxd_dpst_45": {
-    "name": "ncb-dp-prod-kvhj.ncb_dp_prod_serving.c360_fxd_dpst",
+  "tbl_c360_cstmr_dtl_62": {
+    "name": "ncb_dp_prod_serving.c360_cstmr_dtl",
     "source": "N/A",
     "grain": "N/A",
     "frequency": "Daily",
@@ -1049,80 +1132,8 @@ const tablesMetadata = {
     "type": "Source Table",
     "product": "od"
   },
-  "tbl_bi_dim_region_25": {
-    "name": "ncb-dp-prod-kvhj.ncb_dp_prod_dto_bi_ws.bi_dim_region",
-    "source": "N/A",
-    "grain": "N/A",
-    "frequency": "Daily",
-    "type": "Source Table",
-    "product": "od"
-  },
-  "tbl_adj_fa_rmd_mis1_kpi_sales_rm_24": {
-    "name": "ncb-dp-prod-kvhj.ncb_dp_prod_dto_bi_ws.adj_fa_rmd_mis1_kpi_sales_rm",
-    "source": "N/A",
-    "grain": "N/A",
-    "frequency": "Daily",
-    "type": "Source Table",
-    "product": "od"
-  },
-  "tbl_adhoc_bi_card_agg_monthly_update_3": {
-    "name": "ncb-dp-prod-kvhj.ncb_dp_prod_dto_bi_ws.adhoc_bi_card_agg_monthly_update",
-    "source": "N/A",
-    "grain": "N/A",
-    "frequency": "Daily",
-    "type": "Source Table",
-    "product": "od"
-  },
-  "tbl_c360_crdt_crd_trnsctn_38": {
-    "name": "ncb-dp-prod-kvhj.ncb_dp_prod_serving.c360_crdt_crd_trnsctn",
-    "source": "N/A",
-    "grain": "N/A",
-    "frequency": "Daily",
-    "type": "Source Table",
-    "product": "od"
-  },
-  "tbl_adhoc_sd_config_pq_9": {
-    "name": "ncb-dp-prod-kvhj.ncb_dp_prod_dto_bi_ws.adhoc_sd_config_pq",
-    "source": "N/A",
-    "grain": "N/A",
-    "frequency": "Daily",
-    "type": "Source Table",
-    "product": "od"
-  },
-  "tbl_bi_lending_paidoff_monthly_58": {
-    "name": "ncb_dp_prod_dto_bi_ws.bi_lending_paidoff_monthly",
-    "source": "N/A",
-    "grain": "N/A",
-    "frequency": "Daily",
-    "type": "Source Table",
-    "product": "loan"
-  },
-  "tbl_c360_cstmr_addtnl_dtl_60": {
-    "name": "ncb_dp_prod_serving.c360_cstmr_addtnl_dtl",
-    "source": "N/A",
-    "grain": "N/A",
-    "frequency": "Daily",
-    "type": "Source Table",
-    "product": "od"
-  },
   "tbl_adhoc_bi_card_agg_monthly_update_49": {
     "name": "ncb_dp_prod_dto_bi_ws.adhoc_bi_card_agg_monthly_update",
-    "source": "N/A",
-    "grain": "N/A",
-    "frequency": "Daily",
-    "type": "Source Table",
-    "product": "od"
-  },
-  "tbl_c360_cs_accnt_infrmtn_40": {
-    "name": "ncb-dp-prod-kvhj.ncb_dp_prod_serving.c360_cs_accnt_infrmtn",
-    "source": "N/A",
-    "grain": "N/A",
-    "frequency": "Daily",
-    "type": "Source Table",
-    "product": "od"
-  },
-  "tbl_upload_qttc_badbank_32": {
-    "name": "ncb-dp-prod-kvhj.ncb_dp_prod_dto_bi_ws.upload_qttc_badbank",
     "source": "N/A",
     "grain": "N/A",
     "frequency": "Daily",
@@ -1137,16 +1148,16 @@ const tablesMetadata = {
     "type": "Source Table",
     "product": "loan"
   },
-  "tbl_c360_cstmr_dtl_62": {
-    "name": "ncb_dp_prod_serving.c360_cstmr_dtl",
+  "tbl_c360_ovrdrft_lmt_64": {
+    "name": "ncb_dp_prod_serving.c360_ovrdrft_lmt",
     "source": "N/A",
     "grain": "N/A",
     "frequency": "Daily",
     "type": "Source Table",
     "product": "od"
   },
-  "tbl_c360_ovrdrft_lmt_64": {
-    "name": "ncb_dp_prod_serving.c360_ovrdrft_lmt",
+  "tbl_c360_crd_dtl_37": {
+    "name": "ncb-dp-prod-kvhj.ncb_dp_prod_serving.c360_crd_dtl",
     "source": "N/A",
     "grain": "N/A",
     "frequency": "Daily",
@@ -1161,48 +1172,32 @@ const tablesMetadata = {
     "type": "Source Table",
     "product": "od"
   },
-  "tbl_bi_lending_financial_solution_30": {
-    "name": "ncb-dp-prod-kvhj.ncb_dp_prod_dto_bi_ws.bi_lending_financial_solution",
+  "tbl_c360_lns_46": {
+    "name": "ncb-dp-prod-kvhj.ncb_dp_prod_serving.c360_lns",
     "source": "N/A",
     "grain": "N/A",
     "frequency": "Daily",
     "type": "Source Table",
     "product": "loan"
   },
-  "tbl_c360_cs_accnt_blncs_39": {
-    "name": "ncb-dp-prod-kvhj.ncb_dp_prod_serving.c360_cs_accnt_blncs",
+  "tbl_c360_cstmr_clssfctn_42": {
+    "name": "ncb-dp-prod-kvhj.ncb_dp_prod_serving.c360_cstmr_clssfctn",
     "source": "N/A",
     "grain": "N/A",
     "frequency": "Daily",
     "type": "Source Table",
     "product": "od"
   },
-  "tbl_bi_fd_product_deposit_v2_27": {
-    "name": "ncb-dp-prod-kvhj.ncb_dp_prod_dto_bi_ws.bi_fd_product_deposit_v2",
-    "source": "N/A",
-    "grain": "N/A",
-    "frequency": "Daily",
-    "type": "Source Table",
-    "product": "fd"
-  },
-  "tbl_adj_dto_crm_sales_35": {
-    "name": "ncb-dp-prod-kvhj.ncb_dp_prod_dto_crm_ws.adj_dto_crm_sales",
+  "tbl_c360_crdt_crd_trnsctn_38": {
+    "name": "ncb-dp-prod-kvhj.ncb_dp_prod_serving.c360_crdt_crd_trnsctn",
     "source": "N/A",
     "grain": "N/A",
     "frequency": "Daily",
     "type": "Source Table",
     "product": "od"
   },
-  "tbl_c360_cstmr_clssfctn_61": {
-    "name": "ncb_dp_prod_serving.c360_cstmr_clssfctn",
-    "source": "N/A",
-    "grain": "N/A",
-    "frequency": "Daily",
-    "type": "Source Table",
-    "product": "od"
-  },
-  "tbl_c360_bnk_rltnshp_36": {
-    "name": "ncb-dp-prod-kvhj.ncb_dp_prod_serving.c360_bnk_rltnshp",
+  "tbl_adhoc_bi_card_agg_monthly_update_3": {
+    "name": "ncb-dp-prod-kvhj.ncb_dp_prod_dto_bi_ws.adhoc_bi_card_agg_monthly_update",
     "source": "N/A",
     "grain": "N/A",
     "frequency": "Daily",
@@ -1216,6 +1211,14 @@ const tablesMetadata = {
     "frequency": "Daily",
     "type": "Source Table",
     "product": "loan"
+  },
+  "tbl_bi_dim_region_25": {
+    "name": "ncb-dp-prod-kvhj.ncb_dp_prod_dto_bi_ws.bi_dim_region",
+    "source": "N/A",
+    "grain": "N/A",
+    "frequency": "Daily",
+    "type": "Source Table",
+    "product": "od"
   }
 };
 const embedData = {};
@@ -1282,6 +1285,7 @@ const colors = {
   loan: '#3b82f6',
   od: '#f59e0b',
   account: '#8b5cf6',
+  debit: '#22d3ee',
   cc: '#ef4444',
   cust: '#ec4899',
   overview: '#06b6d4',
