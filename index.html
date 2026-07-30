@@ -15,7 +15,7 @@ body {
   background: #0f172a;
   color: #e2e8f0;
   height: 100vh;
-  overflow: hidden; /* Lock the main screen scroll */
+  overflow: hidden;
 }
 .wrap {
   display: flex;
@@ -114,7 +114,7 @@ body {
   overflow: hidden;
 }
 
-.z-raw { flex: 2; }
+.z-raw { flex: 2.8; }
 .z-detail { flex: 1.2; border-color: #8b5cf6; background: rgba(139, 92, 246, 0.01); }
 .z-agg { flex: 1.2; border-color: #06b6d4; background: rgba(6, 182, 212, 0.01); }
 
@@ -136,7 +136,7 @@ body {
 /* Source sub-sections grid layout */
 .source-grid {
   display: grid;
-  grid-template-columns: 1.2fr 1fr 0.8fr;
+  grid-template-columns: 1fr 1fr 1fr 0.7fr;
   gap: 8px;
   height: 100%;
   overflow: hidden;
@@ -206,7 +206,7 @@ body {
   white-space: nowrap;
 }
 .box .sub {
-  display: none; /* Hide long names unless hovered inside tooltip */
+  display: none;
 }
 .box .badge {
   display: inline-block;
@@ -413,7 +413,7 @@ body {
           </div>
 
           <div class="source-col">
-            <div class="section-label">BI_WS (Upload)</div>
+            <div class="section-label">BI_WS Code (Adhoc)</div>
             <div class="scroll-col">
               
         <div class="box prod-od" id="tbl_adhoc_bi_card_agg_monthly_update_2" data-product="od">
@@ -426,6 +426,32 @@ body {
           <span class="badge badge-raw">Source Table</span>
         </div>
 
+        <div class="box prod-loan" id="tbl_adhoc_bi_sd_cc_monthly_26" data-product="loan">
+          <div class="label" title="ncb-dp-prod-kvhj.ncb_dp_prod_dto_bi_ws.bi_lending_debtgroup                                                                           ncb-dp-prod-kvhj.ncb_dp_prod_bi.mortgageapproval_logs_de_logs_curated ncb_dp_prod_dto_bi_ws.adhoc_bi_sd_lending_monthly                                                                                              ncb-dp-prod-kvhj.ncb_dp_prod_dto_bi_ws.adhoc_sd_ovrdrft_monthly_detail                                                     ncb-dp-prod-kvhj.ncb_dp_prod_dto_bi_ws.adhoc_bi_sd_cc_monthly">adhoc_bi_sd_cc_monthly</div>
+          <span class="badge badge-raw">Source Table</span>
+        </div>
+
+        <div class="box prod-od" id="tbl_adhoc_ai_cc_detail_update_45" data-product="od">
+          <div class="label" title="ncb_dp_prod_dto_bi_ws.adhoc_ai_cc_detail_update">adhoc_ai_cc_detail_update</div>
+          <span class="badge badge-raw">Source Table</span>
+        </div>
+
+        <div class="box prod-od" id="tbl_adhoc_bi_card_agg_monthly_update_46" data-product="od">
+          <div class="label" title="ncb_dp_prod_dto_bi_ws.adhoc_ai_cc_detail_update  ncb_dp_prod_dto_bi_ws.adhoc_bi_card_agg_monthly_update">adhoc_bi_card_agg_monthly_update</div>
+          <span class="badge badge-raw">Source Table</span>
+        </div>
+
+        <div class="box prod-od" id="tbl_adhoc_bi_card_agg_monthly_update_47" data-product="od">
+          <div class="label" title="ncb_dp_prod_dto_bi_ws.adhoc_bi_card_agg_monthly_update">adhoc_bi_card_agg_monthly_update</div>
+          <span class="badge badge-raw">Source Table</span>
+        </div>
+            </div>
+          </div>
+
+          <div class="source-col">
+            <div class="section-label">BI_WS Manual (Upload)</div>
+            <div class="scroll-col">
+              
         <div class="box prod-od" id="tbl_bi_dim_region_20" data-product="od">
           <div class="label" title="ncb-dp-prod-kvhj.ncb_dp_prod_dto_bi_ws.bi_dim_region">bi_dim_region</div>
           <span class="badge badge-raw">Source Table</span>
@@ -456,11 +482,6 @@ body {
           <span class="badge badge-raw">Source Table</span>
         </div>
 
-        <div class="box prod-loan" id="tbl_adhoc_bi_sd_cc_monthly_26" data-product="loan">
-          <div class="label" title="ncb-dp-prod-kvhj.ncb_dp_prod_dto_bi_ws.bi_lending_debtgroup                                                                           ncb-dp-prod-kvhj.ncb_dp_prod_bi.mortgageapproval_logs_de_logs_curated ncb_dp_prod_dto_bi_ws.adhoc_bi_sd_lending_monthly                                                                                              ncb-dp-prod-kvhj.ncb_dp_prod_dto_bi_ws.adhoc_sd_ovrdrft_monthly_detail                                                     ncb-dp-prod-kvhj.ncb_dp_prod_dto_bi_ws.adhoc_bi_sd_cc_monthly">adhoc_bi_sd_cc_monthly</div>
-          <span class="badge badge-raw">Source Table</span>
-        </div>
-
         <div class="box prod-loan" id="tbl_bi_lending_financial_solution_27" data-product="loan">
           <div class="label" title="ncb-dp-prod-kvhj.ncb_dp_prod_dto_bi_ws.bi_lending_financial_solution">bi_lending_financial_solution</div>
           <span class="badge badge-raw">Source Table</span>
@@ -483,21 +504,6 @@ body {
 
         <div class="box prod-od" id="tbl_upload_qttc_xoano_31" data-product="od">
           <div class="label" title="ncb-dp-prod-kvhj.ncb_dp_prod_dto_bi_ws.upload_qttc_xoano">upload_qttc_xoano</div>
-          <span class="badge badge-raw">Source Table</span>
-        </div>
-
-        <div class="box prod-od" id="tbl_adhoc_ai_cc_detail_update_45" data-product="od">
-          <div class="label" title="ncb_dp_prod_dto_bi_ws.adhoc_ai_cc_detail_update">adhoc_ai_cc_detail_update</div>
-          <span class="badge badge-raw">Source Table</span>
-        </div>
-
-        <div class="box prod-od" id="tbl_adhoc_bi_card_agg_monthly_update_46" data-product="od">
-          <div class="label" title="ncb_dp_prod_dto_bi_ws.adhoc_ai_cc_detail_update  ncb_dp_prod_dto_bi_ws.adhoc_bi_card_agg_monthly_update">adhoc_bi_card_agg_monthly_update</div>
-          <span class="badge badge-raw">Source Table</span>
-        </div>
-
-        <div class="box prod-od" id="tbl_adhoc_bi_card_agg_monthly_update_47" data-product="od">
-          <div class="label" title="ncb_dp_prod_dto_bi_ws.adhoc_bi_card_agg_monthly_update">adhoc_bi_card_agg_monthly_update</div>
           <span class="badge badge-raw">Source Table</span>
         </div>
 
@@ -874,6 +880,214 @@ const tablesMetadata = {
     "type": "fact",
     "product": "cc"
   },
+  "tbl_upload_qttc_xoano_31": {
+    "name": "ncb-dp-prod-kvhj.ncb_dp_prod_dto_bi_ws.upload_qttc_xoano",
+    "source": "N/A",
+    "grain": "N/A",
+    "frequency": "Daily",
+    "type": "Source Table",
+    "product": "od"
+  },
+  "tbl_c360_cstmr_clssfctn_59": {
+    "name": "ncb_dp_prod_serving.c360_cstmr_clssfctn",
+    "source": "N/A",
+    "grain": "N/A",
+    "frequency": "Daily",
+    "type": "Source Table",
+    "product": "od"
+  },
+  "tbl_c360_fxd_dpst_42": {
+    "name": "ncb-dp-prod-kvhj.ncb_dp_prod_serving.c360_fxd_dpst",
+    "source": "N/A",
+    "grain": "N/A",
+    "frequency": "Daily",
+    "type": "Source Table",
+    "product": "od"
+  },
+  "tbl_adj_dto_crm_sales_32": {
+    "name": "ncb-dp-prod-kvhj.ncb_dp_prod_dto_crm_ws.adj_dto_crm_sales",
+    "source": "N/A",
+    "grain": "N/A",
+    "frequency": "Daily",
+    "type": "Source Table",
+    "product": "od"
+  },
+  "tbl_c360_cs_accnt_blncs_36": {
+    "name": "ncb-dp-prod-kvhj.ncb_dp_prod_serving.c360_cs_accnt_blncs",
+    "source": "N/A",
+    "grain": "N/A",
+    "frequency": "Daily",
+    "type": "Source Table",
+    "product": "od"
+  },
+  "tbl_c360_cstmr_dtl_60": {
+    "name": "ncb_dp_prod_serving.c360_cstmr_dtl",
+    "source": "N/A",
+    "grain": "N/A",
+    "frequency": "Daily",
+    "type": "Source Table",
+    "product": "od"
+  },
+  "tbl_adhoc_bi_card_agg_monthly_update_47": {
+    "name": "ncb_dp_prod_dto_bi_ws.adhoc_bi_card_agg_monthly_update",
+    "source": "N/A",
+    "grain": "N/A",
+    "frequency": "Daily",
+    "type": "Source Table",
+    "product": "od"
+  },
+  "tbl_upload_qttc_badbank_29": {
+    "name": "ncb-dp-prod-kvhj.ncb_dp_prod_dto_bi_ws.upload_qttc_badbank",
+    "source": "N/A",
+    "grain": "N/A",
+    "frequency": "Daily",
+    "type": "Source Table",
+    "product": "od"
+  },
+  "tbl_c360_cs_accnt_infrmtn_37": {
+    "name": "ncb-dp-prod-kvhj.ncb_dp_prod_serving.c360_cs_accnt_infrmtn",
+    "source": "N/A",
+    "grain": "N/A",
+    "frequency": "Daily",
+    "type": "Source Table",
+    "product": "od"
+  },
+  "tbl_adhoc_bi_sd_cc_monthly_26": {
+    "name": "ncb-dp-prod-kvhj.ncb_dp_prod_dto_bi_ws.bi_lending_debtgroup                                                                           ncb-dp-prod-kvhj.ncb_dp_prod_bi.mortgageapproval_logs_de_logs_curated ncb_dp_prod_dto_bi_ws.adhoc_bi_sd_lending_monthly                                                                                              ncb-dp-prod-kvhj.ncb_dp_prod_dto_bi_ws.adhoc_sd_ovrdrft_monthly_detail                                                     ncb-dp-prod-kvhj.ncb_dp_prod_dto_bi_ws.adhoc_bi_sd_cc_monthly",
+    "source": "N/A",
+    "grain": "N/A",
+    "frequency": "Daily",
+    "type": "Source Table",
+    "product": "loan"
+  },
+  "tbl_c360_dbt_crd_41": {
+    "name": "ncb-dp-prod-kvhj.ncb_dp_prod_serving.c360_dbt_crd",
+    "source": "N/A",
+    "grain": "N/A",
+    "frequency": "Daily",
+    "type": "Source Table",
+    "product": "od"
+  },
+  "tbl_c360_lns_43": {
+    "name": "ncb-dp-prod-kvhj.ncb_dp_prod_serving.c360_lns",
+    "source": "N/A",
+    "grain": "N/A",
+    "frequency": "Daily",
+    "type": "Source Table",
+    "product": "loan"
+  },
+  "tbl_c360_bnk_rltnshp_33": {
+    "name": "ncb-dp-prod-kvhj.ncb_dp_prod_serving.c360_bnk_rltnshp",
+    "source": "N/A",
+    "grain": "N/A",
+    "frequency": "Daily",
+    "type": "Source Table",
+    "product": "od"
+  },
+  "tbl_adhoc_ai_cc_detail_update_45": {
+    "name": "ncb_dp_prod_dto_bi_ws.adhoc_ai_cc_detail_update",
+    "source": "N/A",
+    "grain": "N/A",
+    "frequency": "Daily",
+    "type": "Source Table",
+    "product": "od"
+  },
+  "tbl_bi_fd_product_deposit_v2_22": {
+    "name": "ncb-dp-prod-kvhj.ncb_dp_prod_dto_bi_ws.bi_fd_product_deposit_v2",
+    "source": "N/A",
+    "grain": "N/A",
+    "frequency": "Daily",
+    "type": "Source Table",
+    "product": "fd"
+  },
+  "tbl_adhoc_bi_card_agg_monthly_update_2": {
+    "name": "ncb-dp-prod-kvhj.ncb_dp_prod_dto_bi_ws.adhoc_bi_card_agg_monthly_update",
+    "source": "N/A",
+    "grain": "N/A",
+    "frequency": "Daily",
+    "type": "Source Table",
+    "product": "od"
+  },
+  "tbl_c360_cstmr_dtl_40": {
+    "name": "ncb-dp-prod-kvhj.ncb_dp_prod_serving.c360_cstmr_dtl",
+    "source": "N/A",
+    "grain": "N/A",
+    "frequency": "Daily",
+    "type": "Source Table",
+    "product": "od"
+  },
+  "tbl_c360_cstmr_addtnl_dtl_58": {
+    "name": "ncb_dp_prod_serving.c360_cstmr_addtnl_dtl",
+    "source": "N/A",
+    "grain": "N/A",
+    "frequency": "Daily",
+    "type": "Source Table",
+    "product": "od"
+  },
+  "tbl_c360_cstmr_clssfctn_39": {
+    "name": "ncb-dp-prod-kvhj.ncb_dp_prod_serving.c360_cstmr_clssfctn",
+    "source": "N/A",
+    "grain": "N/A",
+    "frequency": "Daily",
+    "type": "Source Table",
+    "product": "od"
+  },
+  "tbl_adhoc_bi_card_agg_monthly_update_46": {
+    "name": "ncb_dp_prod_dto_bi_ws.adhoc_ai_cc_detail_update  ncb_dp_prod_dto_bi_ws.adhoc_bi_card_agg_monthly_update",
+    "source": "N/A",
+    "grain": "N/A",
+    "frequency": "Daily",
+    "type": "Source Table",
+    "product": "od"
+  },
+  "tbl_bi_lending_debtgroup_24": {
+    "name": "ncb-dp-prod-kvhj.ncb_dp_prod_dto_bi_ws.bi_lending_debtgroup",
+    "source": "N/A",
+    "grain": "N/A",
+    "frequency": "Daily",
+    "type": "Source Table",
+    "product": "loan"
+  },
+  "tbl_bi_lending_branch_23": {
+    "name": "ncb-dp-prod-kvhj.ncb_dp_prod_dto_bi_ws.bi_lending_branch",
+    "source": "N/A",
+    "grain": "N/A",
+    "frequency": "Daily",
+    "type": "Source Table",
+    "product": "loan"
+  },
+  "tbl_c360_ovrdrft_lmt_62": {
+    "name": "ncb_dp_prod_serving.c360_ovrdrft_lmt",
+    "source": "N/A",
+    "grain": "N/A",
+    "frequency": "Daily",
+    "type": "Source Table",
+    "product": "od"
+  },
+  "tbl_bi_lending_paidoff_monthly_56": {
+    "name": "ncb_dp_prod_dto_bi_ws.bi_lending_paidoff_monthly",
+    "source": "N/A",
+    "grain": "N/A",
+    "frequency": "Daily",
+    "type": "Source Table",
+    "product": "loan"
+  },
+  "tbl_upload_qttc_sbv_30": {
+    "name": "ncb-dp-prod-kvhj.ncb_dp_prod_dto_bi_ws.upload_qttc_sbv",
+    "source": "N/A",
+    "grain": "N/A",
+    "frequency": "Daily",
+    "type": "Source Table",
+    "product": "od"
+  },
+  "tbl_mortgageapproval_logs_de_logs_curated_25": {
+    "name": "ncb-dp-prod-kvhj.ncb_dp_prod_dto_bi_ws.bi_lending_debtgroup                                                                           ncb-dp-prod-kvhj.ncb_dp_prod_bi.mortgageapproval_logs_de_logs_curated",
+    "source": "N/A",
+    "grain": "N/A",
+    "frequency": "Daily",
+    "type": "Source Table",
+    "product": "loan"
+  },
   "tbl_c360_cstmr_addtnl_dtl_38": {
     "name": "ncb-dp-prod-kvhj.ncb_dp_prod_serving.c360_cstmr_addtnl_dtl",
     "source": "N/A",
@@ -890,152 +1104,8 @@ const tablesMetadata = {
     "type": "Source Table",
     "product": "od"
   },
-  "tbl_upload_qttc_badbank_29": {
-    "name": "ncb-dp-prod-kvhj.ncb_dp_prod_dto_bi_ws.upload_qttc_badbank",
-    "source": "N/A",
-    "grain": "N/A",
-    "frequency": "Daily",
-    "type": "Source Table",
-    "product": "od"
-  },
-  "tbl_adhoc_bi_card_agg_monthly_update_47": {
-    "name": "ncb_dp_prod_dto_bi_ws.adhoc_bi_card_agg_monthly_update",
-    "source": "N/A",
-    "grain": "N/A",
-    "frequency": "Daily",
-    "type": "Source Table",
-    "product": "od"
-  },
-  "tbl_bi_fd_contract_exc_21": {
-    "name": "ncb-dp-prod-kvhj.ncb_dp_prod_dto_bi_ws.bi_fd_contract_exc",
-    "source": "N/A",
-    "grain": "N/A",
-    "frequency": "Daily",
-    "type": "Source Table",
-    "product": "fd"
-  },
-  "tbl_c360_dbt_crd_41": {
-    "name": "ncb-dp-prod-kvhj.ncb_dp_prod_serving.c360_dbt_crd",
-    "source": "N/A",
-    "grain": "N/A",
-    "frequency": "Daily",
-    "type": "Source Table",
-    "product": "od"
-  },
-  "tbl_c360_bnk_rltnshp_33": {
-    "name": "ncb-dp-prod-kvhj.ncb_dp_prod_serving.c360_bnk_rltnshp",
-    "source": "N/A",
-    "grain": "N/A",
-    "frequency": "Daily",
-    "type": "Source Table",
-    "product": "od"
-  },
-  "tbl_upload_qttc_xoano_31": {
-    "name": "ncb-dp-prod-kvhj.ncb_dp_prod_dto_bi_ws.upload_qttc_xoano",
-    "source": "N/A",
-    "grain": "N/A",
-    "frequency": "Daily",
-    "type": "Source Table",
-    "product": "od"
-  },
-  "tbl_bi_lending_branch_23": {
-    "name": "ncb-dp-prod-kvhj.ncb_dp_prod_dto_bi_ws.bi_lending_branch",
-    "source": "N/A",
-    "grain": "N/A",
-    "frequency": "Daily",
-    "type": "Source Table",
-    "product": "loan"
-  },
-  "tbl_c360_cs_accnt_blncs_36": {
-    "name": "ncb-dp-prod-kvhj.ncb_dp_prod_serving.c360_cs_accnt_blncs",
-    "source": "N/A",
-    "grain": "N/A",
-    "frequency": "Daily",
-    "type": "Source Table",
-    "product": "od"
-  },
-  "tbl_c360_fxd_dpst_42": {
-    "name": "ncb-dp-prod-kvhj.ncb_dp_prod_serving.c360_fxd_dpst",
-    "source": "N/A",
-    "grain": "N/A",
-    "frequency": "Daily",
-    "type": "Source Table",
-    "product": "od"
-  },
-  "tbl_c360_cstmr_clssfctn_39": {
-    "name": "ncb-dp-prod-kvhj.ncb_dp_prod_serving.c360_cstmr_clssfctn",
-    "source": "N/A",
-    "grain": "N/A",
-    "frequency": "Daily",
-    "type": "Source Table",
-    "product": "od"
-  },
-  "tbl_mortgageapproval_logs_de_logs_curated_25": {
-    "name": "ncb-dp-prod-kvhj.ncb_dp_prod_dto_bi_ws.bi_lending_debtgroup                                                                           ncb-dp-prod-kvhj.ncb_dp_prod_bi.mortgageapproval_logs_de_logs_curated",
-    "source": "N/A",
-    "grain": "N/A",
-    "frequency": "Daily",
-    "type": "Source Table",
-    "product": "loan"
-  },
-  "tbl_c360_lns_43": {
-    "name": "ncb-dp-prod-kvhj.ncb_dp_prod_serving.c360_lns",
-    "source": "N/A",
-    "grain": "N/A",
-    "frequency": "Daily",
-    "type": "Source Table",
-    "product": "loan"
-  },
-  "tbl_c360_cstmr_dtl_60": {
-    "name": "ncb_dp_prod_serving.c360_cstmr_dtl",
-    "source": "N/A",
-    "grain": "N/A",
-    "frequency": "Daily",
-    "type": "Source Table",
-    "product": "od"
-  },
-  "tbl_c360_cstmr_dtl_40": {
-    "name": "ncb-dp-prod-kvhj.ncb_dp_prod_serving.c360_cstmr_dtl",
-    "source": "N/A",
-    "grain": "N/A",
-    "frequency": "Daily",
-    "type": "Source Table",
-    "product": "od"
-  },
-  "tbl_c360_ovrdrft_lmt_44": {
-    "name": "ncb-dp-prod-kvhj.ncb_dp_prod_serving.c360_ovrdrft_lmt",
-    "source": "N/A",
-    "grain": "N/A",
-    "frequency": "Daily",
-    "type": "Source Table",
-    "product": "od"
-  },
-  "tbl_bi_dim_region_20": {
-    "name": "ncb-dp-prod-kvhj.ncb_dp_prod_dto_bi_ws.bi_dim_region",
-    "source": "N/A",
-    "grain": "N/A",
-    "frequency": "Daily",
-    "type": "Source Table",
-    "product": "od"
-  },
-  "tbl_c360_cstmr_clssfctn_59": {
-    "name": "ncb_dp_prod_serving.c360_cstmr_clssfctn",
-    "source": "N/A",
-    "grain": "N/A",
-    "frequency": "Daily",
-    "type": "Source Table",
-    "product": "od"
-  },
-  "tbl_adhoc_bi_card_agg_monthly_update_2": {
-    "name": "ncb-dp-prod-kvhj.ncb_dp_prod_dto_bi_ws.adhoc_bi_card_agg_monthly_update",
-    "source": "N/A",
-    "grain": "N/A",
-    "frequency": "Daily",
-    "type": "Source Table",
-    "product": "od"
-  },
-  "tbl_bi_lending_paidoff_monthly_56": {
-    "name": "ncb_dp_prod_dto_bi_ws.bi_lending_paidoff_monthly",
+  "tbl_bi_lending_financial_solution_27": {
+    "name": "ncb-dp-prod-kvhj.ncb_dp_prod_dto_bi_ws.bi_lending_financial_solution",
     "source": "N/A",
     "grain": "N/A",
     "frequency": "Daily",
@@ -1050,86 +1120,6 @@ const tablesMetadata = {
     "type": "Source Table",
     "product": "od"
   },
-  "tbl_adhoc_bi_card_agg_monthly_update_46": {
-    "name": "ncb_dp_prod_dto_bi_ws.adhoc_ai_cc_detail_update  ncb_dp_prod_dto_bi_ws.adhoc_bi_card_agg_monthly_update",
-    "source": "N/A",
-    "grain": "N/A",
-    "frequency": "Daily",
-    "type": "Source Table",
-    "product": "od"
-  },
-  "tbl_adj_dto_crm_sales_32": {
-    "name": "ncb-dp-prod-kvhj.ncb_dp_prod_dto_crm_ws.adj_dto_crm_sales",
-    "source": "N/A",
-    "grain": "N/A",
-    "frequency": "Daily",
-    "type": "Source Table",
-    "product": "od"
-  },
-  "tbl_bi_fd_product_deposit_v2_22": {
-    "name": "ncb-dp-prod-kvhj.ncb_dp_prod_dto_bi_ws.bi_fd_product_deposit_v2",
-    "source": "N/A",
-    "grain": "N/A",
-    "frequency": "Daily",
-    "type": "Source Table",
-    "product": "fd"
-  },
-  "tbl_c360_ovrdrft_lmt_62": {
-    "name": "ncb_dp_prod_serving.c360_ovrdrft_lmt",
-    "source": "N/A",
-    "grain": "N/A",
-    "frequency": "Daily",
-    "type": "Source Table",
-    "product": "od"
-  },
-  "tbl_bi_lending_debtgroup_24": {
-    "name": "ncb-dp-prod-kvhj.ncb_dp_prod_dto_bi_ws.bi_lending_debtgroup",
-    "source": "N/A",
-    "grain": "N/A",
-    "frequency": "Daily",
-    "type": "Source Table",
-    "product": "loan"
-  },
-  "tbl_adhoc_bi_sd_cc_monthly_26": {
-    "name": "ncb-dp-prod-kvhj.ncb_dp_prod_dto_bi_ws.bi_lending_debtgroup                                                                           ncb-dp-prod-kvhj.ncb_dp_prod_bi.mortgageapproval_logs_de_logs_curated ncb_dp_prod_dto_bi_ws.adhoc_bi_sd_lending_monthly                                                                                              ncb-dp-prod-kvhj.ncb_dp_prod_dto_bi_ws.adhoc_sd_ovrdrft_monthly_detail                                                     ncb-dp-prod-kvhj.ncb_dp_prod_dto_bi_ws.adhoc_bi_sd_cc_monthly",
-    "source": "N/A",
-    "grain": "N/A",
-    "frequency": "Daily",
-    "type": "Source Table",
-    "product": "loan"
-  },
-  "tbl_c360_cstmr_addtnl_dtl_58": {
-    "name": "ncb_dp_prod_serving.c360_cstmr_addtnl_dtl",
-    "source": "N/A",
-    "grain": "N/A",
-    "frequency": "Daily",
-    "type": "Source Table",
-    "product": "od"
-  },
-  "tbl_adhoc_sd_config_pq_8": {
-    "name": "ncb-dp-prod-kvhj.ncb_dp_prod_dto_bi_ws.adhoc_sd_config_pq",
-    "source": "N/A",
-    "grain": "N/A",
-    "frequency": "Daily",
-    "type": "Source Table",
-    "product": "od"
-  },
-  "tbl_bi_lending_financial_solution_27": {
-    "name": "ncb-dp-prod-kvhj.ncb_dp_prod_dto_bi_ws.bi_lending_financial_solution",
-    "source": "N/A",
-    "grain": "N/A",
-    "frequency": "Daily",
-    "type": "Source Table",
-    "product": "loan"
-  },
-  "tbl_upload_qttc_sbv_30": {
-    "name": "ncb-dp-prod-kvhj.ncb_dp_prod_dto_bi_ws.upload_qttc_sbv",
-    "source": "N/A",
-    "grain": "N/A",
-    "frequency": "Daily",
-    "type": "Source Table",
-    "product": "od"
-  },
   "tbl_c360_lns_61": {
     "name": "ncb_dp_prod_serving.c360_lns",
     "source": "N/A",
@@ -1137,14 +1127,6 @@ const tablesMetadata = {
     "frequency": "Daily",
     "type": "Source Table",
     "product": "loan"
-  },
-  "tbl_adhoc_ai_cc_detail_update_45": {
-    "name": "ncb_dp_prod_dto_bi_ws.adhoc_ai_cc_detail_update",
-    "source": "N/A",
-    "grain": "N/A",
-    "frequency": "Daily",
-    "type": "Source Table",
-    "product": "od"
   },
   "tbl_dim_product_28": {
     "name": "ncb-dp-prod-kvhj.ncb_dp_prod_dto_bi_ws.dim_product",
@@ -1154,6 +1136,14 @@ const tablesMetadata = {
     "type": "Source Table",
     "product": "od"
   },
+  "tbl_bi_fd_contract_exc_21": {
+    "name": "ncb-dp-prod-kvhj.ncb_dp_prod_dto_bi_ws.bi_fd_contract_exc",
+    "source": "N/A",
+    "grain": "N/A",
+    "frequency": "Daily",
+    "type": "Source Table",
+    "product": "fd"
+  },
   "tbl_bi_lending_prepaid_monthly_57": {
     "name": "ncb_dp_prod_dto_bi_ws.bi_lending_prepaid_monthly",
     "source": "N/A",
@@ -1162,8 +1152,24 @@ const tablesMetadata = {
     "type": "Source Table",
     "product": "loan"
   },
-  "tbl_c360_cs_accnt_infrmtn_37": {
-    "name": "ncb-dp-prod-kvhj.ncb_dp_prod_serving.c360_cs_accnt_infrmtn",
+  "tbl_bi_dim_region_20": {
+    "name": "ncb-dp-prod-kvhj.ncb_dp_prod_dto_bi_ws.bi_dim_region",
+    "source": "N/A",
+    "grain": "N/A",
+    "frequency": "Daily",
+    "type": "Source Table",
+    "product": "od"
+  },
+  "tbl_c360_ovrdrft_lmt_44": {
+    "name": "ncb-dp-prod-kvhj.ncb_dp_prod_serving.c360_ovrdrft_lmt",
+    "source": "N/A",
+    "grain": "N/A",
+    "frequency": "Daily",
+    "type": "Source Table",
+    "product": "od"
+  },
+  "tbl_adhoc_sd_config_pq_8": {
+    "name": "ncb-dp-prod-kvhj.ncb_dp_prod_dto_bi_ws.adhoc_sd_config_pq",
     "source": "N/A",
     "grain": "N/A",
     "frequency": "Daily",
@@ -1404,7 +1410,6 @@ document.querySelectorAll('.box').forEach(box => {
   });
 });
 
-// Redraw arrows when scrolling inner columns
 document.querySelectorAll('.scroll-col').forEach(sc => {
   sc.addEventListener('scroll', renderArrows);
 });
